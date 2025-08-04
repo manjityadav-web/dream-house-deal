@@ -19,7 +19,7 @@ const[data, setData]= useState([])
 
   const fetchData = async()=>{
 
-        const result = await axios.get('http://localhost:5500/api/contact-list')
+        const result = await axios.get('https://dream-house-deal-1.onrender.com/api/contact-list')
 
          if(result?.data?.code==200){
           setData(result?.data?.data)

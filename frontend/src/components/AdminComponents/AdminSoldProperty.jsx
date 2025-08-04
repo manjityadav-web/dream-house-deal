@@ -19,7 +19,7 @@ const AdminSoldProperty = () => {
 
       const fetchData = async()=>{
 
-         const response = await axios.get('http://localhost:5500/api/admin-sold-property')
+         const response = await axios.get('https://dream-house-deal-1.onrender.com/api/admin-sold-property')
          
            if(response?.data?.code==200){
           setData(response?.data?.data)  
@@ -40,7 +40,7 @@ const AdminSoldProperty = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
 
-     const response = await axios.post('http://localhost:5500/api/delete-sold-property', { _id });
+     const response = await axios.post('https://dream-house-deal-1.onrender.com/api/delete-sold-property', { _id });
         if (response?.data?.code == 200) {
 
           
@@ -101,7 +101,7 @@ const AdminSoldProperty = () => {
       <td>{item?.price}</td>
       <td>{item?.area}</td>
       <td>{item?.location}</td>
-      <td><img height="60" width="100" src={`http://localhost:5500/img/${item?.pic}`} /></td>
+      <td><img height="60" width="100" src={`https://dream-house-deal-1.onrender.com/img/${item?.pic}`} /></td>
       <td><button className='btn btn-outline-danger bg-danger w-100 ms-3 mt-2' onClick={()=>{handleDeleteProperty(item?._id)}}>Delete</button></td>
     </tr>
     )

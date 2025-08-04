@@ -22,7 +22,7 @@ const AdminPropertyList = () => {
   ,[])
 
         const fetchList = async()=>{
-          const result = await axios.get('http://localhost:5500/api/property-list')
+          const result = await axios.get('https://dream-house-deal-1.onrender.com/api/property-list')
           console.log(result,'result ko delh le bhai');
           
           if(result?.data?.code==200){
@@ -46,7 +46,7 @@ const AdminPropertyList = () => {
 }).then(async(result) => {
   if (result.isConfirmed) {
 
- const response =  await  axios.post('http://localhost:5500/api/delete-property',{_id})
+ const response =  await  axios.post('https://dream-house-deal-1.onrender.com/api/delete-property',{_id})
     if(response?.data?.code==200){
       Swal.fire({
         title: "Delete Property",
@@ -78,7 +78,7 @@ const AdminPropertyList = () => {
                  return (
                      <div className="propertyCard" key={index}>
                        <div className="imgContainer">
-                         <img src={`http://localhost:5500/img/${data.pic}`} />
+                         <img src={`https://dream-house-deal-1.onrender.com/img/${data.pic}`} />
                        </div>
                        <div className="propertyInfo">
                          <span className="fs-5">{data?.price}</span>

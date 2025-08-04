@@ -19,7 +19,7 @@ const Property = () => {
   const handleBuy = async(propertyId)=>{
     const userData = JSON.parse(localStorage.getItem('userInfo'))
     console.log(userData,'userdata is here..')
-   const response = await  axios.post('http://localhost:5500/api/buy',{userId:userData?._id, propertyId});
+   const response = await  axios.post('https://dream-house-deal-1.onrender.com/api/buy',{userId:userData?._id, propertyId});
    if(response?.data?.code==200){
 
     Swal.fire({
@@ -48,7 +48,7 @@ const Property = () => {
    ,[])
  
  const fetchList = async()=>{
-          const result = await axios.get('http://localhost:5500/api/property-list')
+          const result = await axios.get('https://dream-house-deal-1.onrender.com/api/property-list')
        
           
           if(result?.data?.code==200){
@@ -71,7 +71,7 @@ const Property = () => {
             return (
                 <div className="propertyCard" key={index} import data-aos="fade-up">
                   <div className="imgContainer">
-                    <img src={`http://localhost:5500/img/${data.pic}`} />
+                    <img src={`https://dream-house-deal-1.onrender.com/img/${data.pic}`} />
                   </div>
                   <div className="propertyInfo">
                     <span className="fs-5">{data.price}</span>

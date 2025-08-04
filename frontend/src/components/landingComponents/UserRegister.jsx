@@ -45,7 +45,7 @@ const UserRegister = () => {
         formdata.append('contact',data?.contact)
         formdata.append('profile',data?.profile[0])
 
-      const result =  await axios.post('http://localhost:5500/api/user-register',formdata,{
+      const result =  await axios.post('https://dream-house-deal-1.onrender.com/api/user-register',formdata,{
         headers:{
             "Content-Type": "multipart/form-data"
         }
