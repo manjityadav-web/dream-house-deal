@@ -27,4 +27,3 @@ This is a full-stack real estate web application where users can buy, sell, and 
 - MongoDB (Mongoose)
 - Axios
 
-## 📁 Folder Structure
